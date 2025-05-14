@@ -1,44 +1,69 @@
-# 🚀 Dockerized Node.js Application
+
+# 🐳 Docker Node.js App
+
+A simple Node.js application containerized using Docker. This project provides a basic starting point to run your Node.js app inside a Docker container using Docker Compose.
+
+---
 
 ## 📦 Clone the Repository
+
 ```bash
-git clone "https://github.com/perumandlahemakumari/docker-nodejs-app.git"
+git clone https://github.com/perumandlahemakumari/docker-nodejs-app.git
 cd docker-nodejs-app
-```
-
-## 🔧 Build the Docker Image
-```bash
-docker build -t nodeapp .
-```
-
-## 📸 View Available Docker Images
-```bash
-docker images
-```
-
-## 🏃‍♂️ Run the Docker Container
-```bash
-docker run -itd --name cont4 -p 8086:80 nodeapp
-```
-
-Now open your browser and navigate to:
-```
-http://<YOUR-IP>:8086
-```
-
-## 📁 Directory Cleanup (Optional)
-If needed, remove the old README and list contents:
-```bash
-rm README.md
-ls -l
-```
-
-## ✍️ Edit Dockerfile (Optional)
-You can customize the Dockerfile as needed:
-```bash
-vi Dockerfile
 ```
 
 ---
 
-🔹 **Project Maintainer**: [perumandlahemakumari](https://github.com/perumandlahemakumari)
+## 🛠️ Prerequisites
+
+Ensure you have the following installed:
+
+- Docker 🐳
+- Docker Compose 🔧
+
+---
+
+## 🚀 Run the Application
+
+Use Docker Compose to build and start the app:
+
+```bash
+docker compose up --build -d
+```
+
+To check running containers:
+
+```bash
+docker ps
+```
+
+---
+
+## 🌐 Access the App
+
+Once the container is running, open your browser and go to:
+
+```
+http://localhost:3000
+```
+
+> 📍 Default port is **3000**. Update `docker-compose.yml` if needed.
+
+---
+
+## 📁 Project Structure
+
+```
+docker-nodejs-app/
+├── Dockerfile
+├── docker-compose.yml
+├── package.json
+└── app/
+    └── index.js
+```
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
